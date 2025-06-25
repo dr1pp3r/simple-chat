@@ -1,0 +1,9 @@
+{
+  "name": "simple-chat/db",
+  "type": "module",
+  "main": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./schemas": "./schemas/index.ts"
+  }
+}

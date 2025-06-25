@@ -1,0 +1,34 @@
+{
+  "name": "simple-chat",
+  "private": true,
+  "packageManager": "pnpm@10.12.1",
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx scripts/migrate-db.ts"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.1",
+    "prettier": "^3.5.3",
+    "supabase": "^2.26.9",
+    "tsx": "^4.20.3",
+    "turbo": "^2.5.4",
+    "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.44.2",
+    "postgres": "^3.4.7"
+  }
+}

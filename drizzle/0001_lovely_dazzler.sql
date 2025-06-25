@@ -1,0 +1,1 @@
+ALTER TABLE "better-auth"."users" ALTER COLUMN "image" SET DEFAULT '';
