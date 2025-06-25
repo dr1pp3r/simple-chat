@@ -4,7 +4,8 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "inputs": ["$TURBO_DEFAULT$", "apps/web/.env.production"],
+      "env": ["NODE_ENV", "DATABASE_URL", "BETTER_AUTH_SECRET", "OPENAI_API_KEY", "EXA_API_KEY", "ROBOFLOW_API_KEY"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {
